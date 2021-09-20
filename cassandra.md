@@ -17,3 +17,19 @@ docker start cassandra-node
 ```bash
 docker exec -it cassandra-node bash
 ```
+
+*Access Cassandra Shel*
+```bash
+cqlsh
+```
+
+*Create Keyspace*
+```sql
+-- Create a keyspace
+CREATE KEYSPACE IF NOT EXISTS store WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : '1' };
+```
+
+*Check all the keyspaces*
+```
+desc keyspaces
+```
